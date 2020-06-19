@@ -8,6 +8,8 @@
     "node": ">=10.x"
   },
   "scripts": {
+    "dockerup": "docker-compose -f docker-compose.yml -f docker-compose.nodejs.yml up -d",
+    "dockerdown": "docker-compose -f docker-compose.yml -f docker-compose.nodejs.yml down",
     "dev": "nodemon",
     "dev:inspect": "nodemon --exec \"node --inspect -r ts-node/register src\"",
     "build": "npm run -s build:code && npm run -s build:copy:graphql && npm run -s build:copy:schema",
